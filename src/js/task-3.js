@@ -1,8 +1,8 @@
+const randomIntegerFromInterval = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+};
 const makeTransaction = transaction => {
   return new Promise((resolve, reject) => {
-    const randomIntegerFromInterval = (min, max) => {
-      return Math.floor(Math.random() * (max - min + 1) + min);
-    };
     const delay = randomIntegerFromInterval(1000, 1500);
     setTimeout(() => {
       const canProcess = Math.random() > 0.3;
